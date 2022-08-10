@@ -42,10 +42,11 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
+            InlineKeyboardButton('How To Use This Bot', url=f'https://telegra.ph/How-To-Use-FileServingbot-12-25')
+            ],[
             InlineKeyboardButton('Add Me To Your Groups', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates', url='https://t.me/liquidxprojects')
+            InlineKeyboardButton('Search', switch_inline_query_current_chat='')
             ],[
             InlineKeyboardButton('Help', callback_data='help'),
             InlineKeyboardButton('About', callback_data='about')
@@ -88,10 +89,11 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
+            InlineKeyboardButton('How To Use This Bot', url=f'https://telegra.ph/How-To-Use-FileServingbot-12-25')
+            ],[
             InlineKeyboardButton('Add Me To Your Groups', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates', url='https://t.me/liquidxprojects')
+            InlineKeyboardButton('Search', switch_inline_query_current_chat='')
             ],[
             InlineKeyboardButton('Help', callback_data='help'),
             InlineKeyboardButton('About', callback_data='about')
